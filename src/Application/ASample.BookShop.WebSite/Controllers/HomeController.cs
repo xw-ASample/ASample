@@ -1,6 +1,9 @@
-﻿using System;
+﻿using ASample.BookShop.Service.IService;
+using ASample.BookShop.Service.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,9 +11,19 @@ namespace ASample.BookShop.WebSite.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public HomeController()
         {
-            return View();
+
+        }
+        IBookService BookService;
+        public HomeController(IBookService bookService)
+        {
+            BookService = bookService;
+        }
+        public async Task<ActionResult> Index()
+        {
+            var result = await BookService.Select(c => true);
+            return View(result);
         }
 
         public ActionResult About()

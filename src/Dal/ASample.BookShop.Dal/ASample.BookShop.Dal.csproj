@@ -52,6 +52,15 @@
     <Compile Include="Base\IBaseRepository.cs" />
     <Compile Include="IRepository\IBookRepository.cs" />
     <Compile Include="Map\BookMap.cs" />
+    <Compile Include="Migrations\201803220143230_initDataBase.cs" />
+    <Compile Include="Migrations\201803220143230_initDataBase.Designer.cs">
+      <DependentUpon>201803220143230_initDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803220149360_initDataBase1.cs" />
+    <Compile Include="Migrations\201803220149360_initDataBase1.Designer.cs">
+      <DependentUpon>201803220149360_initDataBase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Respository\BookRepository.cs" />
@@ -66,7 +75,14 @@
       <Name>ASmaple.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803220143230_initDataBase.resx">
+      <DependentUpon>201803220143230_initDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803220149360_initDataBase1.resx">
+      <DependentUpon>201803220149360_initDataBase1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

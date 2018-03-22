@@ -9,6 +9,8 @@ namespace ASample.BookShop.Dal.Models
 {
     public class Book : AggregateRoot
     {
+        public string Name { get; set; }
 
+        public int  Price { get; set; }
     }
 }
