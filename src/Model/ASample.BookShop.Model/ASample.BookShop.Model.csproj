@@ -43,16 +43,24 @@
     <Compile Include="AggregateRoots\Book.cs" />
     <Compile Include="AggregateRoots\Cart.cs" />
     <Compile Include="AggregateRoots\Category.cs" />
+    <Compile Include="AggregateRoots\Department.cs" />
+    <Compile Include="AggregateRoots\KeyWordRank.cs" />
+    <Compile Include="AggregateRoots\Order.cs" />
     <Compile Include="AggregateRoots\Publisher.cs" />
     <Compile Include="AggregateRoots\Role.cs" />
+    <Compile Include="AggregateRoots\SearchDetail.cs" />
+    <Compile Include="AggregateRoots\Setting.cs" />
     <Compile Include="AggregateRoots\User.cs" />
     <Compile Include="AggregateRoots\Admin.cs" />
+    <Compile Include="Entities\CheckEmail.cs" />
+    <Compile Include="Entities\PostAddress.cs" />
     <Compile Include="Entities\UserLevel.cs" />
     <Compile Include="AggregateRoots\VideoFile.cs" />
     <Compile Include="Entities\AdminRoleRelation.cs" />
     <Compile Include="AggregateRoots\BookComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Values\FileStatus.cs" />
+    <Compile Include="Values\OrderState.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\ASmaple.Domain\ASmaple.Domain.csproj">

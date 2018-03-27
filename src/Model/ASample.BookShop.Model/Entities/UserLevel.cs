@@ -13,7 +13,7 @@ namespace ASample.BookShop.Model
         public string Title { get; set; }
 
         /// <summary>
-        /// 等级描述
+        /// 等级描述-*/89
         /// </summary>
         public string Description { get; set; }
     }

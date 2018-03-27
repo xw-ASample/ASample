@@ -4,23 +4,23 @@ using System;
 namespace ASample.BookShop.Model.AggregateRoots
 {
     /// <summary>
-    /// 管理员
+    /// 部门
     /// </summary>
-    public class Admin:AggregateRoot
+    public class Department : AggregateRoot
     {
         /// <summary>
-        /// 用户名
+        /// 部门名称
         /// </summary>
-        public string Name { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
-        /// 用户密码
+        /// 部门描述
         /// </summary>
-        public string Password { get; set; }
-        
+        public string Description { get; set; }
+
         /// <summary>
-        /// 用户邮箱
+        /// 角色编号
         /// </summary>
-        public string Email { get; set; }
+        public Guid RoleId { get; set; }
     }
 }
