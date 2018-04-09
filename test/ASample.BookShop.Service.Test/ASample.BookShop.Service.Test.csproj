@@ -55,11 +55,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Dal\ASample.BookShop.Dal\ASample.BookShop.IRepository.csproj">
+    <ProjectReference Include="..\..\src\Repository\ASample.BookShop.IRepository\ASample.BookShop.IRepository.csproj">
       <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>
       <Name>ASample.BookShop.IRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Service\ASample.BookShop.Service\ASample.BookShop.IService.csproj">
+    <ProjectReference Include="..\..\src\Service\ASample.BookShop.IService\ASample.BookShop.IService.csproj">
       <Project>{95BDC38A-2F28-480A-9AF1-0F131D3B45FE}</Project>
       <Name>ASample.BookShop.IService</Name>
     </ProjectReference>

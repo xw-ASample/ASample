@@ -48,8 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASampleBookShopContext.cs" />
-    <Compile Include="Base\BaseRepositroy.cs" />
-    <Compile Include="Base\IBaseRepository.cs" />
+    <Compile Include="BaseRepository\BaseRepositroy.cs" />
+    <Compile Include="BaseRepository\IBaseRepository.cs" />
     <Compile Include="IRepository\IBookRepository.cs" />
     <Compile Include="Map\BookMap.cs" />
     <Compile Include="Migrations\201803220143230_initDataBase.cs" />

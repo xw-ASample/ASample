@@ -27,13 +27,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.EntityFramework", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.WebSite", "src\Application\ASample.BookShop.WebSite\ASample.BookShop.WebSite.csproj", "{FD1B2A7C-C839-4B5E-B5C3-F0E3165B59DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.IRepository", "src\Dal\ASample.BookShop.Dal\ASample.BookShop.IRepository.csproj", "{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.IRepository", "src\Repository\ASample.BookShop.IRepository\ASample.BookShop.IRepository.csproj", "{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.IService", "src\Service\ASample.BookShop.Service\ASample.BookShop.IService.csproj", "{95BDC38A-2F28-480A-9AF1-0F131D3B45FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.IService", "src\Service\ASample.BookShop.IService\ASample.BookShop.IService.csproj", "{95BDC38A-2F28-480A-9AF1-0F131D3B45FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.Repository", "src\Dal\ASample.BookShop.Dal.Impl\ASample.BookShop.Repository.csproj", "{7901CCEB-3603-4EE7-A663-672D9AD080E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.Repository", "src\Repository\ASample.BookShop.Repository\ASample.BookShop.Repository.csproj", "{7901CCEB-3603-4EE7-A663-672D9AD080E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.Service", "src\Service\ASample.BookShop.Service.Impl\ASample.BookShop.Service.csproj", "{FFCF9816-3A7A-47FD-BA47-0B2E7979FB66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShop.Service", "src\Service\ASample.BookShop.Service\ASample.BookShop.Service.csproj", "{FFCF9816-3A7A-47FD-BA47-0B2E7979FB66}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{89975DF9-9AC8-44E2-A858-C13765AACCF8}"
 EndProject
@@ -65,15 +65,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookShop", "BookShop", "{49
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRM", "CRM", "{1C030FF7-1820-4E1E-9B72-7AE6E037406D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.IRepository", "src\Dal\ASample.Crm.Dal\ASample.Crm.IRepository.csproj", "{335C09BC-038A-4B13-B017-4D65717A61DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.IRepository", "src\Repository\ASample.Crm.IRepository\ASample.Crm.IRepository.csproj", "{335C09BC-038A-4B13-B017-4D65717A61DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.Repository", "src\Dal\ASample.Crm.Dal.Impl\ASample.Crm.Repository.csproj", "{5045F21A-68AF-43CC-9660-D9F47FF84496}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.Repository", "src\Repository\ASample.Crm.Repository\ASample.Crm.Repository.csproj", "{5045F21A-68AF-43CC-9660-D9F47FF84496}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.Model", "src\Model\ASample.Crm.Model\ASample.Crm.Model.csproj", "{B62219C6-2803-495A-8E78-8C37C4FE032D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.IService", "src\Service\ASample.Crm.Service\ASample.Crm.IService.csproj", "{35C487A7-4E55-48AB-9209-4B5C6E6AD0DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.IService", "src\Service\ASample.Crm.IService\ASample.Crm.IService.csproj", "{35C487A7-4E55-48AB-9209-4B5C6E6AD0DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.Service", "src\Service\ASample.Crm.Service.Impl\ASample.Crm.Service.csproj", "{37E88B92-682A-4DEC-9C55-18DE4F1890FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Crm.Service", "src\Service\ASample.Crm.Service\ASample.Crm.Service.csproj", "{37E88B92-682A-4DEC-9C55-18DE4F1890FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

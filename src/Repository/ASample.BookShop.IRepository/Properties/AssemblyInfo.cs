@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("ASample.BookShop.Service.Impl")]
+[assembly: AssemblyTitle("ASample.BookShop.Repository")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ASample.BookShop.Service.Impl")]
+[assembly: AssemblyProduct("ASample.BookShop.Repository")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("ffcf9816-3a7a-47fd-ba47-0b2e7979fb66")]
+[assembly: Guid("dd791c7c-7ce4-45d9-8a96-019c444f4ee3")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("ASample.Crm.Service.Impl")]
+[assembly: AssemblyTitle("ASample.Crm.Service")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ASample.Crm.Service.Impl")]
+[assembly: AssemblyProduct("ASample.Crm.Service")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("37e88b92-682a-4dec-9c55-18de4f1890fe")]
+[assembly: Guid("35c487a7-4e55-48ab-9209-4b5c6e6ad0de")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
