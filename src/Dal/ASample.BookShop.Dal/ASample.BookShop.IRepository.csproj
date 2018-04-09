@@ -7,8 +7,8 @@
     <ProjectGuid>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASample.BookShop.Dal</RootNamespace>
-    <AssemblyName>ASample.BookShop.Dal</AssemblyName>
+    <RootNamespace>ASample.BookShop.IRepository</RootNamespace>
+    <AssemblyName>ASample.BookShop.IRepository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

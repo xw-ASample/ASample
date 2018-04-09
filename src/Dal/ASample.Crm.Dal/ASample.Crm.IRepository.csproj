@@ -7,8 +7,8 @@
     <ProjectGuid>{335C09BC-038A-4B13-B017-4D65717A61DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASample.Crm.Dal</RootNamespace>
-    <AssemblyName>ASample.Crm.Dal</AssemblyName>
+    <RootNamespace>ASample.Crm.IRepository</RootNamespace>
+    <AssemblyName>ASample.Crm.IRepository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

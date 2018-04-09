@@ -11,7 +11,7 @@ namespace ASample.BookShop.Service.BasicService
     public  class BasicService <T>:IBaseService<T> where T:class
     {
         //定义一个属性来接收子类的值
-        public IBaseRepository<T> CurrentDal { get; set; }
+        public IBaseRepository<T> CurrentRepository { get; set; }
 
         #region 1.0 查询相关方法
         /// <summary>
@@ -21,7 +21,7 @@ namespace ASample.BookShop.Service.BasicService
         /// <returns></returns>
         public async Task<IList<T>> Select(Expression<Func<T, bool>> whereLambda)
         {
-            return await CurrentDal.SelectAsync(whereLambda);
+            return await CurrentRepository.SelectAsync(whereLambda);
         }
         /// <summary>
         /// 查询出数据,将数据以分页的形式展示出来
@@ -73,7 +73,7 @@ namespace ASample.BookShop.Service.BasicService
         /// <param name="entity"></param>
         public async Task Delete(Guid id)
         {
-            await CurrentDal.DeleteAsync(id);
+            await CurrentRepository.DeleteAsync(id);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace ASample.BookShop.Service.BasicService
         /// <returns></returns>
         public async Task Update(T entity)
         {
-            await CurrentDal.UpdateAsync(entity);
+            await CurrentRepository.UpdateAsync(entity);
         }
         #endregion
 
@@ -120,7 +120,7 @@ namespace ASample.BookShop.Service.BasicService
         /// <returns></returns>
         public async Task Add(T entity)
         {
-            await CurrentDal.AddAsync(entity);
+            await CurrentRepository.AddAsync(entity);
         }
         #endregion
     }

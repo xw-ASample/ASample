@@ -220,13 +220,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Dal\ASample.BookShop.Dal\ASample.BookShop.Dal.csproj">
+    <ProjectReference Include="..\..\Dal\ASample.BookShop.Dal\ASample.BookShop.IRepository.csproj">
       <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>
-      <Name>ASample.BookShop.Dal</Name>
+      <Name>ASample.BookShop.IRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Service\ASample.BookShop.Service\ASample.BookShop.Service.csproj">
+    <ProjectReference Include="..\..\Service\ASample.BookShop.Service\ASample.BookShop.IService.csproj">
       <Project>{95bdc38a-2f28-480a-9af1-0f131d3b45fe}</Project>
-      <Name>ASample.BookShop.Service</Name>
+      <Name>ASample.BookShop.IService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

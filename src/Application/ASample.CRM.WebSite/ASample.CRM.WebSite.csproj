@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASample.CRM.WebSite</RootNamespace>
-    <AssemblyName>ASample.CRM.WebSite</AssemblyName>
+    <RootNamespace>ASample.Crm.WebSite</RootNamespace>
+    <AssemblyName>ASample.Crm.WebSite</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -230,25 +230,25 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Dal\ASample.Crm.Dal.Impl\ASample.Crm.Dal.Impl.csproj">
+    <ProjectReference Include="..\..\Dal\ASample.Crm.Dal.Impl\ASample.Crm.Repository.csproj">
       <Project>{5045f21a-68af-43cc-9660-d9f47ff84496}</Project>
-      <Name>ASample.Crm.Dal.Impl</Name>
+      <Name>ASample.Crm.Repository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Dal\ASample.Crm.Dal\ASample.Crm.Dal.csproj">
+    <ProjectReference Include="..\..\Dal\ASample.Crm.Dal\ASample.Crm.IRepository.csproj">
       <Project>{335c09bc-038a-4b13-b017-4d65717a61dc}</Project>
-      <Name>ASample.Crm.Dal</Name>
+      <Name>ASample.Crm.IRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Model\ASample.Crm.Model\ASample.Crm.Model.csproj">
       <Project>{B62219C6-2803-495A-8E78-8C37C4FE032D}</Project>
       <Name>ASample.Crm.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Service\ASample.Crm.Service.Impl\ASample.Crm.Service.Impl.csproj">
+    <ProjectReference Include="..\..\Service\ASample.Crm.Service.Impl\ASample.Crm.Service.csproj">
       <Project>{37e88b92-682a-4dec-9c55-18de4f1890fe}</Project>
-      <Name>ASample.Crm.Service.Impl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Service\ASample.Crm.Service\ASample.Crm.Service.csproj">
-      <Project>{35C487A7-4E55-48AB-9209-4B5C6E6AD0DE}</Project>
       <Name>ASample.Crm.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\ASample.Crm.Service\ASample.Crm.IService.csproj">
+      <Project>{35C487A7-4E55-48AB-9209-4B5C6E6AD0DE}</Project>
+      <Name>ASample.Crm.IService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

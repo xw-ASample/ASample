@@ -20,16 +20,16 @@ namespace ASample.CRM.WebSite
 
 
             //2.0 告诉Autofac框架，将来要创建的控制器类存放在哪个程序集 (itcast.CRM15.Site)
-            Assembly controllerAss = Assembly.Load("ASample.CRM.WebSite");
+            Assembly controllerAss = Assembly.Load("ASample.Crm.WebSite");
             builder.RegisterControllers(controllerAss);
 
             //3.0 告诉autofac框架注册数据仓储层所在程序集中的所有类的对象实例
-            Assembly respAss = Assembly.Load("ASample.Crm.Dal.Impl");
+            Assembly respAss = Assembly.Load("ASample.Crm.Repository");
             //创建respAss中的所有类的instance以此类的实现接口存储
             builder.RegisterTypes(respAss.GetTypes()).AsImplementedInterfaces();
 
             //4.0 告诉autofac框架注册业务逻辑层所在程序集中的所有类的对象实例
-            Assembly serAss = Assembly.Load("ASample.Crm.Service.Impl");
+            Assembly serAss = Assembly.Load("ASample.Crm.Service");
             //创建serAss中的所有类的instance以此类的实现接口存储
             builder.RegisterTypes(serAss.GetTypes()).AsImplementedInterfaces();
 

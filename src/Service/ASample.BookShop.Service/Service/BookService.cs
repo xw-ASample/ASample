@@ -12,11 +12,11 @@ namespace ASample.BookShop.Service.Service
 {
     public class BookService : BasicService<Book>, IBookService
     {
-        IBookRepository dal;
-        public BookService(IBookRepository dal)
+        IBookRepository BookRepository;
+        public BookService(IBookRepository bookRepository)
         {
-            this.dal = dal;
-            base.CurrentDal = dal;
+            this.BookRepository = bookRepository;
+            base.CurrentRepository = bookRepository;
         }
     }
 }
