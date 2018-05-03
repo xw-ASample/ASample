@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,16 +52,24 @@
     <Compile Include="BaseRepository\BaseRepositroy.cs" />
     <Compile Include="Repository\BookRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\ASample.EntityFramework\ASample.EntityFramework.csproj">
       <Project>{A4D60581-4E2E-4FDE-84D4-374B1BE84A8D}</Project>
       <Name>ASample.EntityFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Model\ASample.BookShop.Model\ASample.BookShop.Model.csproj">
+      <Project>{27364A76-1208-4F36-ACDB-7F8A5EBBE934}</Project>
+      <Name>ASample.BookShop.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ASample.BookShop.IRepository\ASample.BookShop.IRepository.csproj">
       <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>
       <Name>ASample.BookShop.IRepository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

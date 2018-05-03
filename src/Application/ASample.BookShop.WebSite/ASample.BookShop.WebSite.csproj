@@ -158,19 +158,34 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Account\RegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\book_list.css" />
+    <Content Include="Content\Css\bootstrap.css" />
+    <Content Include="Content\Css\bootstrap.min.css" />
+    <Content Include="Content\border-anim-h.gif" />
+    <Content Include="Content\border-anim-v.gif" />
+    <Content Include="Content\border-h.gif" />
+    <Content Include="Content\border-v.gif" />
+    <Content Include="Content\Css\cart.css" />
+    <Content Include="Content\Css\demos.css" />
+    <Content Include="Content\Css\imgareaselect-default.css" />
+    <Content Include="Content\Css\index.css" />
+    <Content Include="Content\Css\login.css" />
+    <Content Include="Content\Css\PageBar.css" />
+    <Content Include="Content\Css\page_bottom_new.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Css\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -201,10 +216,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\Plugin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -220,6 +236,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Model\ASample.BookShop.Model\ASample.BookShop.Model.csproj">
+      <Project>{27364a76-1208-4f36-acdb-7f8a5ebbe934}</Project>
+      <Name>ASample.BookShop.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Repository\ASample.BookShop.IRepository\ASample.BookShop.IRepository.csproj">
       <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>
       <Name>ASample.BookShop.IRepository</Name>

@@ -1,9 +1,5 @@
 ﻿using ASample.BookShop.IService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ASample.BookShop.WebSite.Controllers
@@ -21,7 +17,7 @@ namespace ASample.BookShop.WebSite.Controllers
         }
         public async Task<ActionResult> Index()
         {
-            var result = await BookService.Select(c => true);
+            var result = await BookService.SelectAsync(c => true);
             return View(result);
         }
 

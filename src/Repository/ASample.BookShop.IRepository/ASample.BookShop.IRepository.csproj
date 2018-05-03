@@ -50,7 +50,9 @@
     <Compile Include="ASampleBookShopContext.cs" />
     <Compile Include="BaseRepository\IBaseRepository.cs" />
     <Compile Include="IRepository\IBookRepository.cs" />
+    <Compile Include="IRepository\IUserRepository.cs" />
     <Compile Include="Map\BookMap.cs" />
+    <Compile Include="Map\UserMap.cs" />
     <Compile Include="Migrations\201803220143230_initDataBase.cs" />
     <Compile Include="Migrations\201803220143230_initDataBase.Designer.cs">
       <DependentUpon>201803220143230_initDataBase.cs</DependentUpon>
@@ -71,6 +73,10 @@
     <ProjectReference Include="..\..\Infrastructure\ASmaple.Domain\ASmaple.Domain.csproj">
       <Project>{C0008393-2149-420A-8BA1-304C07E14F8B}</Project>
       <Name>ASmaple.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\ASample.BookShop.Model\ASample.BookShop.Model.csproj">
+      <Project>{27364A76-1208-4F36-ACDB-7F8A5EBBE934}</Project>
+      <Name>ASample.BookShop.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

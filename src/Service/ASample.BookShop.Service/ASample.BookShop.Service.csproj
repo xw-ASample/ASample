@@ -43,11 +43,16 @@
     <Compile Include="BasicService\BasicService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BookService.cs" />
+    <Compile Include="Service\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\ASample.EntityFramework\ASample.EntityFramework.csproj">
       <Project>{A4D60581-4E2E-4FDE-84D4-374B1BE84A8D}</Project>
       <Name>ASample.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\ASample.BookShop.Model\ASample.BookShop.Model.csproj">
+      <Project>{27364A76-1208-4F36-ACDB-7F8A5EBBE934}</Project>
+      <Name>ASample.BookShop.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Repository\ASample.BookShop.IRepository\ASample.BookShop.IRepository.csproj">
       <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>

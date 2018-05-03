@@ -20,10 +20,12 @@ namespace ASample.BookShop.Service
         /// </summary>
         /// <param name="whereLambda">查询的条件</param>
         /// <returns></returns>
-        public async Task<IList<T>> Select(Expression<Func<T, bool>> whereLambda)
+        public async Task<IList<T>> SelectAsync(Expression<Func<T, bool>> whereLambda)
         {
             return await CurrentRepository.SelectAsync(whereLambda);
         }
+
+
         /// <summary>
         /// 查询出数据,将数据以分页的形式展示出来
         /// </summary>
@@ -72,7 +74,7 @@ namespace ASample.BookShop.Service
         /// 前台传过来一个实体进行删除
         /// </summary>
         /// <param name="entity"></param>
-        public async Task Delete(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
             await CurrentRepository.DeleteAsync(id);
         }
@@ -107,7 +109,7 @@ namespace ASample.BookShop.Service
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public async Task Update(T entity)
+        public async Task UpdateAsync(T entity)
         {
             await CurrentRepository.UpdateAsync(entity);
         }
@@ -119,7 +121,7 @@ namespace ASample.BookShop.Service
         /// </summary>
         /// <param name="entity">前台传过来的实体</param>
         /// <returns></returns>
-        public async Task Add(T entity)
+        public async Task AddAsync(T entity)
         {
             await CurrentRepository.AddAsync(entity);
         }

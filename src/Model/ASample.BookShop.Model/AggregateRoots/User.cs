@@ -20,7 +20,7 @@ namespace ASample.BookShop.Model.AggregateRoots
         /// <summary>
         /// 用户名称
         /// </summary>
-        public string Name { get; set; }
+        public string RealName { get; set; }
 
         /// <summary>
         /// 用户地址

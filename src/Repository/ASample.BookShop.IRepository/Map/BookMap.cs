@@ -1,4 +1,4 @@
-﻿using ASample.BookShop.IRepository.Models;
+﻿using ASample.BookShop.Model;
 using System.Data.Entity.ModelConfiguration;
 
 namespace ASample.BookShop.IRepository.Map

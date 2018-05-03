@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ASample.BookShop.IRepository.Models
 {
-    public class Book : AggregateRoot
-    {
-        public string Name { get; set; }
+    //public class Book : AggregateRoot
+    //{
+    //    public string Name { get; set; }
 
-        public int  Price { get; set; }
-    }
+    //    public int  Price { get; set; }
+    //}
 }

@@ -1,7 +1,6 @@
 ﻿using ASample.BookShop.IRepository;
-using ASample.BookShop.IRepository.Models;
 using ASample.BookShop.IService;
-
+using ASample.BookShop.Model;
 
 namespace ASample.BookShop.Service
 {
