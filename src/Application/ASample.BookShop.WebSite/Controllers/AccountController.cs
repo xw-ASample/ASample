@@ -43,6 +43,14 @@ namespace ASample.BookShop.WebSite.Controllers
             return View();
         }
 
+
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public async Task<bool> Register(RegisterModel model)
         {
             if (ModelState.IsValid)
