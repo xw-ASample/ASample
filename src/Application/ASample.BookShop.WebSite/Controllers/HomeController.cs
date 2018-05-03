@@ -1,5 +1,4 @@
-﻿using ASample.BookShop.Service.IService;
-using ASample.BookShop.Service.Service;
+﻿using ASample.BookShop.IService;
 using System;
 using System.Collections.Generic;
 using System.Linq;

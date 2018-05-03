@@ -2,7 +2,7 @@
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Reflection;
 
-namespace ASample.BookShop.Dal
+namespace ASample.BookShop.IRepository
 {
     public class ASampleBookShopContext: DbContext
     {

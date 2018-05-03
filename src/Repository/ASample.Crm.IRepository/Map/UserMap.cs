@@ -1,7 +1,7 @@
 ﻿using ASample.Crm.Model.AggregateRoots;
 using System.Data.Entity.ModelConfiguration;
 
-namespace ASample.Crm.Dal.Map
+namespace ASample.Crm.IRepository.Map
 {
     public class UserMap :  EntityTypeConfiguration<User>
     {

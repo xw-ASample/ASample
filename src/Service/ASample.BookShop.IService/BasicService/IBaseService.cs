@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASample.BookShop.Service.BasicService
+namespace ASample.BookShop.IService
 {
     public interface IBaseService<T> where T : class
     {

@@ -1,7 +1,6 @@
-﻿using ASample.Crm.Dal.IBaseDal;
-using ASample.Crm.Model.AggregateRoots;
+﻿using ASample.Crm.Model.AggregateRoots;
 
-namespace ASample.Crm.Dal.IRepository
+namespace ASample.Crm.IRepository
 {
     public interface  IUserRepository : IBaseRepository<User>
     {

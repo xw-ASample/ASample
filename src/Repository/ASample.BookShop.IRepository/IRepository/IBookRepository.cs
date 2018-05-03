@@ -1,9 +1,6 @@
-﻿using ASample.BookShop.Dal.Base;
-using ASample.BookShop.Dal.Models;
-using ASample.EntityFramework.Repository;
-using System;
+﻿using ASample.BookShop.IRepository.Models;
 
-namespace ASample.BookShop.Dal.IRepository
+namespace ASample.BookShop.IRepository
 {
     public interface IBookRepository : IBaseRepository<Book>
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASample.BookShop.Dal.Models
+namespace ASample.BookShop.IRepository.Models
 {
     public class Book : AggregateRoot
     {

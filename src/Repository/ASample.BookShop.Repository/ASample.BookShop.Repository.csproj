@@ -40,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseRepository\BaseRepositroy.cs" />
+    <Compile Include="Repository\BookRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\ASample.EntityFramework\ASample.EntityFramework.csproj">
+      <Project>{A4D60581-4E2E-4FDE-84D4-374B1BE84A8D}</Project>
+      <Name>ASample.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ASample.BookShop.IRepository\ASample.BookShop.IRepository.csproj">
+      <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>
+      <Name>ASample.BookShop.IRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

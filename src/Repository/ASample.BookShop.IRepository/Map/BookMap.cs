@@ -1,12 +1,7 @@
-﻿using ASample.BookShop.Dal.Models;
-using System;
-using System.Collections.Generic;
+﻿using ASample.BookShop.IRepository.Models;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ASample.BookShop.Dal.Map
+namespace ASample.BookShop.IRepository.Map
 {
     public class BookMap : EntityTypeConfiguration<Book>
     {

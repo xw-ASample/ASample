@@ -1,5 +1,5 @@
-﻿using ASample.Crm.Dal.IBaseDal;
-using ASample.Crm.Service.IBaseService;
+﻿using ASample.Crm.IRepository;
+using ASample.Crm.IService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASample.Crm.Service.Impl.BaseService
+namespace ASample.Crm.Service
 {
     public class BaseService<T> : IBaseService<T> where T : class
     {

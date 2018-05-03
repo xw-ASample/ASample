@@ -1,4 +1,4 @@
-﻿using ASample.Crm.Service.IServices;
+﻿using ASample.Crm.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASample.Crm.Service.IBaseService
+namespace ASample.Crm.IService
 {
     public interface  IBaseService<T> where T :class
     {

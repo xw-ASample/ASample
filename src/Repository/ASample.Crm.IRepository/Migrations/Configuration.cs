@@ -5,14 +5,14 @@ namespace ASample.Crm.Dal.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ASample.Crm.Dal.ASampleCrmContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<IRepository.ASampleCrmContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(ASample.Crm.Dal.ASampleCrmContext context)
+        protected override void Seed(ASample.Crm.IRepository.ASampleCrmContext context)
         {
             //  This method will be called after migrating to the latest version.
 

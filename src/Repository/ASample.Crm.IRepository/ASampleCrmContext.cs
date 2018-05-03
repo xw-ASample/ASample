@@ -2,7 +2,7 @@
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Reflection;
 
-namespace ASample.Crm.Dal
+namespace ASample.Crm.IRepository
 {
     public class ASampleCrmContext : DbContext
     {

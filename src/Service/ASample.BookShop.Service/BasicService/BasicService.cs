@@ -1,4 +1,5 @@
-﻿using ASample.BookShop.Dal.Base;
+﻿using ASample.BookShop.IRepository;
+using ASample.BookShop.IService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASample.BookShop.Service.BasicService
+namespace ASample.BookShop.Service
 {
     public  class BasicService <T>:IBaseService<T> where T:class
     {
