@@ -24,12 +24,12 @@ namespace ASample.BookShop.WebSite
             builder.RegisterControllers(controllerAss);
 
             //3.0 告诉autofac框架注册数据仓储层所在程序集中的所有类的对象实例
-            Assembly respAss = Assembly.Load("ASample.BookShop.IRepository");
+            Assembly respAss = Assembly.Load("ASample.BookShop.Repository");
             //创建respAss中的所有类的instance以此类的实现接口存储
             builder.RegisterTypes(respAss.GetTypes()).AsImplementedInterfaces();
 
             //4.0 告诉autofac框架注册业务逻辑层所在程序集中的所有类的对象实例
-            Assembly serAss = Assembly.Load("ASample.BookShop.IService");
+            Assembly serAss = Assembly.Load("ASample.BookShop.Service");
             //创建serAss中的所有类的instance以此类的实现接口存储
             builder.RegisterTypes(serAss.GetTypes()).AsImplementedInterfaces();
 

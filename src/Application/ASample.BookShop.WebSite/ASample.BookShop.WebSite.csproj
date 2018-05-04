@@ -245,9 +245,17 @@
       <Project>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</Project>
       <Name>ASample.BookShop.IRepository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Repository\ASample.BookShop.Repository\ASample.BookShop.Repository.csproj">
+      <Project>{7901cceb-3603-4ee7-a663-672d9ad080e0}</Project>
+      <Name>ASample.BookShop.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Service\ASample.BookShop.IService\ASample.BookShop.IService.csproj">
       <Project>{95bdc38a-2f28-480a-9af1-0f131d3b45fe}</Project>
       <Name>ASample.BookShop.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\ASample.BookShop.Service\ASample.BookShop.Service.csproj">
+      <Project>{ffcf9816-3a7a-47fd-ba47-0b2e7979fb66}</Project>
+      <Name>ASample.BookShop.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

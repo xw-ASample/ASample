@@ -22,38 +22,49 @@ namespace ASample.BookShop.WebSite.Controllers
         {
             UserService = userService;
         }
-        // GET: Account
+        
+        /// <summary>
+        /// 用户登录页面
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Login()
         {
             return View();
         }
 
+        [HttpPost]
         public async Task<ActionResult> Login(LoginModel model)
         {
             var result = await UserService.SelectAsync(c => c.LoginName == model.Name && c.LoginPassword == model.Password);
             if(result.Count > 0)
             {
-                //登录成功  
+                //登录成功 
+                return Content("登录成功");
             }
             else
             {
                 //登录失败
+                return Content("登录失败");
             }
-            return View();
         }
 
 
+        /// <summary>
+        /// 用户注册页面
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Register()
         {
             return View();
         }
 
+
         [HttpPost]
         public async Task<bool> Register(RegisterModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return false;
             var user = new User
             {

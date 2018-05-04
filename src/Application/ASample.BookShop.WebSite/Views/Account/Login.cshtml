@@ -12,61 +12,59 @@
         <td width="10"><img src="/Content/Plugin/Images/az-tan-top-right-round-corner.gif" width="10" height="28" /></td>
     </tr>
 </table>
-@using (Html.BeginForm("UserLogin", "Login", FormMethod.Post, new { id = "form1" }))
-{
-    <input type="hidden" name="returnUrl" value="@ViewData["Url"]" />
-    <table width="60%" height="22" border="0" align="center" cellpadding="0" cellspacing="0" id="tblsecend">
-        <tr>
-            <td bgcolor="#DDDDCC" style="width: 2px">&nbsp;</td>
-            <td>
-                <div align="center">
-                    <table height="61" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td height="33" colspan="6">
-                                <p style="font-size:14px;font-weight: bold;color: #FF9900; text-align: center;">已注册用户请从这里登录</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="24%" height="26" rowspan="2" align="right" valign="top"><strong>用户名：</strong></td>
-                            <td valign="top" width="37%">
-                                &nbsp;<input type="text" name="txtName" />@ViewBag.Msg
-                            </td>
-                        </tr>
-                    </table>
-                    <table height="61" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td height="1" colspan="2"></td>
-                        </tr>
-                        <tr>
-                            <td width="24%" height="26" rowspan="3" align="right" valign="top"><strong>密　码：</strong></td>
-                            <td valign="top" width="37%">
-                                &nbsp;<input type="password" name="txtPwd" />
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td valign="top" width="37%">
-                                <input type="checkbox" name="txtCheck" value="true" /> 记住我
-                                <a href="/Account/FindPassword/">忘记密码</a>
-                            </td>
+<input type="hidden" name="returnUrl" value="@ViewData["Url"]" />
+<table width="60%" height="22" border="0" align="center" cellpadding="0" cellspacing="0" id="tblsecend">
+    <tr>
+        <td bgcolor="#DDDDCC" style="width: 2px">&nbsp;</td>
+        <td>
+            <div align="center">
+                <table height="61" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="33" colspan="6">
+                            <p style="font-size:14px;font-weight: bold;color: #FF9900; text-align: center;">已注册用户请从这里登录</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="24%" height="26" rowspan="2" align="right" valign="top"><strong>用户名：</strong></td>
+                        <td valign="top" width="37%">
+                            &nbsp;<input type="text" name="name" id="name"/>@ViewBag.Msg
+                        </td>
+                    </tr>
+                </table>
+                <table height="61" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="1" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="24%" height="26" rowspan="3" align="right" valign="top"><strong>密　码：</strong></td>
+                        <td valign="top" width="37%">
+                            &nbsp;<input type="password" name="password"id="password" />
+                        </td>
+                    </tr>
 
-                        </tr>
+                    <tr>
+                        <td valign="top" width="37%">
+                            <input type="checkbox" name="txtCheck" value="true" /> 记住我
+                            <a href="/Account/FindPassword/">忘记密码</a>
+                        </td>
 
-                    </table>
-                    <div>
-                        <input type="image" src="/Content/Plugin/Images/az-login-gold-3d.gif" />
-                        <input type="image" src="/Content/Plugin/Images/az-newuser-gold-3d.gif" />
+                    </tr>
+
+                </table>
+                <div>
+                    <input type="image" src="/Content/Plugin/Images/az-login-gold-3d.gif" onclick="loginMethod.login()" />
+                    <input type="image" src="/Content/Plugin/Images/az-newuser-gold-3d.gif" onclick="loginMethod.register()" />
+                </div>
+                <div>
+                    <div align="center">
+                        &nbsp;
                     </div>
-                    <div>
-                        <div align="center">
-                            &nbsp;
-                        </div>
-                    </div>
-            </td>
-            <td width="2" bgcolor="#DDDDCC">&nbsp;</td>
-        </tr>
-    </table>
-}
+                </div>
+        </td>
+        <td width="2" bgcolor="#DDDDCC">&nbsp;</td>
+    </tr>
+</table>
 <table width="60%" height="3" border="0" align="center" cellpadding="0" cellspacing="0" id="tblthird">
     <tr align="center">
         <td height="3" bgcolor="#DDDDCC">
@@ -74,6 +72,43 @@
         </td>
     </tr>
 </table>
+
+<script>
+    var loginParams = {
+
+    };
+
+    var loginMethod = {
+        init: function () {
+            loginMethod.eventBind();
+        },
+        eventBind: function () {
+            //$("#btnLogin").click(function () {
+            //    debugger
+            //    loginMethod.login();
+            //});
+        },
+        //登录
+        login: function () {
+            var loginParam = {
+                name: $("#name").val(),
+                password:$("#password").val()
+            };
+            $.post("/Account/Login", loginParam, function (data) {
+                if (data) {
+                    alert("登录成功");
+                }
+                else {
+                    alert("登录失败");
+                }
+            });
+        },
+        //挑战到注册页面
+        register: function () {
+            location.href = "/Account/Register";
+        }
+    };
+</script>
 
 
 

@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201803220149360_initDataBase1.Designer.cs">
       <DependentUpon>201803220149360_initDataBase1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805040230583_updateDatabase.cs" />
+    <Compile Include="Migrations\201805040230583_updateDatabase.Designer.cs">
+      <DependentUpon>201805040230583_updateDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803220149360_initDataBase1.resx">
       <DependentUpon>201803220149360_initDataBase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805040230583_updateDatabase.resx">
+      <DependentUpon>201805040230583_updateDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
