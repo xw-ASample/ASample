@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD791C7C-7CE4-45D9-8A96-019C444F4EE3}</ProjectGuid>
+    <ProjectGuid>{F1372562-BA34-41EB-89C7-59BBBAFF52F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASample.BookShop.IRepository</RootNamespace>
-    <AssemblyName>ASample.BookShop.IRepository</AssemblyName>
+    <RootNamespace>ASample.ByhShop.Repository</RootNamespace>
+    <AssemblyName>ASample.ByhShop.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,58 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ASampleBookShopContext.cs" />
-    <Compile Include="BaseRepository\IBaseRepository.cs" />
-    <Compile Include="IRepository\IBookRepository.cs" />
-    <Compile Include="IRepository\IUserRepository.cs" />
-    <Compile Include="Map\BookMap.cs" />
-    <Compile Include="Map\UserMap.cs" />
-    <Compile Include="Migrations\201803220143230_initDataBase.cs" />
-    <Compile Include="Migrations\201803220143230_initDataBase.Designer.cs">
-      <DependentUpon>201803220143230_initDataBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803220149360_initDataBase1.cs" />
-    <Compile Include="Migrations\201803220149360_initDataBase1.Designer.cs">
-      <DependentUpon>201803220149360_initDataBase1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805040230583_updateDatabase.cs" />
-    <Compile Include="Migrations\201805040230583_updateDatabase.Designer.cs">
-      <DependentUpon>201805040230583_updateDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="BaseRepository\BaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\ASample.EntityFramework\ASample.EntityFramework.csproj">
       <Project>{A4D60581-4E2E-4FDE-84D4-374B1BE84A8D}</Project>
       <Name>ASample.EntityFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\ASmaple.Domain\ASmaple.Domain.csproj">
-      <Project>{C0008393-2149-420A-8BA1-304C07E14F8B}</Project>
-      <Name>ASmaple.Domain</Name>
+    <ProjectReference Include="..\..\Model\ASample.ByhShop.Model\ASample.ByhShop.Model.csproj">
+      <Project>{5493EE2B-F4BD-4610-8DC9-0CD621C5A03B}</Project>
+      <Name>ASample.ByhShop.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Model\ASample.BookShop.Model\ASample.BookShop.Model.csproj">
-      <Project>{27364A76-1208-4F36-ACDB-7F8A5EBBE934}</Project>
-      <Name>ASample.BookShop.Model</Name>
+    <ProjectReference Include="..\ASample.ByhShop.IRepository\ASample.ByhShop.IRepository.csproj">
+      <Project>{11c87e79-6975-4354-bb26-f051f985e545}</Project>
+      <Name>ASample.ByhShop.IRepository</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803220143230_initDataBase.resx">
-      <DependentUpon>201803220143230_initDataBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803220149360_initDataBase1.resx">
-      <DependentUpon>201803220149360_initDataBase1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805040230583_updateDatabase.resx">
-      <DependentUpon>201805040230583_updateDatabase.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
