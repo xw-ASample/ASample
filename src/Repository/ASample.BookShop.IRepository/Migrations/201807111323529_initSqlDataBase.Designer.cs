@@ -7,13 +7,13 @@ namespace ASample.BookShop.Dal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class updateDatabase : IMigrationMetadata
+    public sealed partial class initSqlDataBase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updateDatabase));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initSqlDataBase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201805040230583_updateDatabase"; }
+            get { return "201807111323529_initSqlDataBase"; }
         }
         
         string IMigrationMetadata.Source
