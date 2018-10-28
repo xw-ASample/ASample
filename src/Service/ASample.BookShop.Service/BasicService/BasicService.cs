@@ -112,6 +112,7 @@ namespace ASample.BookShop.Service
         public async Task UpdateAsync(T entity)
         {
             await CurrentRepository.UpdateAsync(entity);
+            await CurrentRepository.Commit();
         }
         #endregion
 

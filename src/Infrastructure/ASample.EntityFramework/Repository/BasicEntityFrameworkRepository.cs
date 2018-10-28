@@ -37,14 +37,14 @@ namespace ASample.EntityFramework.Repository
         public async Task AddAsync(TEntity entity)
         {
             _dbSet.Add(entity);
-            await db.SaveChangesAsync();
+            //await db.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(TEntity entity)
         {
             _dbSet.Attach(entity);
             db.Entry(entity).State = EntityState.Modified;
-            await db.SaveChangesAsync();
+            //await db.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(TKey key)
@@ -53,7 +53,7 @@ namespace ASample.EntityFramework.Repository
             if(entity == null)
                 throw new Exception("不存在该记录");
             _dbSet.Remove(entity);
-            await db.SaveChangesAsync();
+            //await db.SaveChangesAsync();
         }
         
         public async Task<TEntity> GetAsync(TKey key)

@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.EntityFramework.MyS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.BookShopMySql.WebSite", "src\Application\ASample.BookShopMySql.WebSite\ASample.BookShopMySql.WebSite.csproj", "{E6CAC484-EDFD-42CD-A188-EF325E9527F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.ByhShop.ManageSite", "src\Application\ASample.ByhShop.ManageSite\ASample.ByhShop.ManageSite.csproj", "{0B46CC0F-798E-4CB4-938E-65D97C62479B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,10 @@ Global
 		{E6CAC484-EDFD-42CD-A188-EF325E9527F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CAC484-EDFD-42CD-A188-EF325E9527F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CAC484-EDFD-42CD-A188-EF325E9527F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B46CC0F-798E-4CB4-938E-65D97C62479B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B46CC0F-798E-4CB4-938E-65D97C62479B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B46CC0F-798E-4CB4-938E-65D97C62479B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B46CC0F-798E-4CB4-938E-65D97C62479B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -264,6 +270,7 @@ Global
 		{0EBB5940-FB6A-4F92-B81E-53DB59CA386E} = {4EE21F33-E395-4A49-9DC6-62CBC6C24AE8}
 		{667DC7F1-0EA7-4B6B-9B64-D37260239D17} = {6AC2A3B1-20F3-4B26-B68A-B0856F93CDDD}
 		{E6CAC484-EDFD-42CD-A188-EF325E9527F1} = {CE08BA30-817E-4BD7-8261-B2C57BA0CB06}
+		{0B46CC0F-798E-4CB4-938E-65D97C62479B} = {CE08BA30-817E-4BD7-8261-B2C57BA0CB06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D4A0F56-60FF-4B79-B8BA-BC798D8DE24A}
