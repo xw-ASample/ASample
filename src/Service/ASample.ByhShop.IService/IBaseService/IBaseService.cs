@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASmaple.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -12,7 +13,7 @@ namespace ASample.ByhShop.IService
         #region 1.0 查询相关方法
         Task<IList<T>> SelectAsync(Expression<Func<T, bool>> whereLambda);
 
-        //IQueryable<T> SelectPaged<s>(int pageIndex, int pageSize, out int totalCount, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc);
+        Task<PagedData<T>>SelectPagedAsync<s>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc);
 
         //IQueryable<T> SelectPaged<s>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc);
         //IQueryable<T> SelectJoin(Expression<Func<T, bool>> whereLambda, string[] tableNames);

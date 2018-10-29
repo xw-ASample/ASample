@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASmaple.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -35,7 +36,6 @@ namespace ASample.EntityFramework.Repository
         /// <returns></returns>
         Task<TEntity> GetAsync(TKey key);
 
-
         /// <summary>
         /// 查询所有
         /// </summary>
@@ -44,7 +44,7 @@ namespace ASample.EntityFramework.Repository
 
         Task<IList<TEntity>> SelectAsync(Expression<Func<TEntity, bool>> whereLambda = null);
 
-        //Task<IPaged<>> SelectPagedAsync();
+        Task<PagedData<TEntity>> SelectPagedAsync<s>(int pageIndex, int pageSize, Expression<Func<TEntity, bool>> whereLambda, Expression<Func<TEntity, s>> orderLambda, bool isAsc = true);
 
         /// <summary>
         /// 提交EF上下文

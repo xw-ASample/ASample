@@ -1,43 +1,91 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Plugin/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/Content/Plugin/jquery-bootgrid/jquery.bootgrid.css" rel="stylesheet" />
 </head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
+    <div class="layui-layout layui-layout-admin" id="cr-admin">
+        <div class="layui-header">
+            <div class="layui-logo">www.wubin.pro</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item admin-side-toggle">
+                    <a href="javascript:;">
+                        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item"><a href="javascript:;" id="clearCache">清除缓存</a></li>
+                <li class="layui-nav-item"><a href="">商品管理</a></li>
+                <li class="layui-nav-item"><a href="">用户</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">其它系统</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">邮件管理</a></dd>
+                        <dd><a href="">消息管理</a></dd>
+                        <dd><a href="">授权管理</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="static/images/logo.png" class="layui-nav-img">
+                        我是超人
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                基本资料
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <i class="fa fa-gear" aria-hidden="true"></i>
+                                安全设置
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                退出
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+        <!--侧边竖导航 start-->
+        <div class="layui-side layui-bg-black" id="cr-admin-side">
+            <div class="layui-side-scroll">
+                <!-- 左侧竖导航区域 -->
+                <ul class="layui-nav layui-nav-tree" id="nav" lay-filter="nav"></ul>
             </div>
         </div>
+        <!--侧边竖导航 end-->
+        <!--主题内容区域 start-->
+        <div class="layui-body" id="cr-admin-body">
+            <!-- 内容主体区域 -->
+            @RenderBody()
+        </div>
+        <!--主题内容区域 end-->
+        <!-- 底部固定区域 start-->
+        <div class="layui-footer footer" id="cr-admin-footer">
+            © 2018 <a href="http://www.wubin.pro">佰元汇服装(www.wubin.pro)</a> - wubin.mail@foxmail.com
+        </div>
+        <!-- 底部固定区域 end-->
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Content/Plugin/layui/layui.all.js"></script>
+    <script src="~/Content/Plugin/jquery-bootgrid/jquery.bootgrid.js"></script>
 </body>
 </html>

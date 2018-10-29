@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASmaple.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -32,6 +33,12 @@ namespace ASample.EntityFramework.Repository
         public BasicEntityFrameworkRepository()
         {
             _dbSet = db.Set<TEntity>();
+        }
+
+        public async Task<PagedData<TEntity>> SelectPagedAsync<s>(int pageIndex, int pageSize,  Expression<Func<TEntity, bool>> whereLambda, Expression<Func<TEntity, s>> orderLambda, bool isAsc = true)
+        {
+            int totalCount = 0;
+            return null;
         }
 
         public async Task AddAsync(TEntity entity)

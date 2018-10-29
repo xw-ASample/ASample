@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\ASmaple.Domain\ASmaple.Domain.csproj">
+      <Project>{C0008393-2149-420A-8BA1-304C07E14F8B}</Project>
+      <Name>ASmaple.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Model\ASample.ByhShop.Model\ASample.ByhShop.Model.csproj">
       <Project>{5493EE2B-F4BD-4610-8DC9-0CD621C5A03B}</Project>
       <Name>ASample.ByhShop.Model</Name>

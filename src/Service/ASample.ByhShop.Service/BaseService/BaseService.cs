@@ -1,5 +1,6 @@
 ﻿using ASample.ByhShop.IRepository;
 using ASample.ByhShop.IService;
+using ASmaple.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,10 +36,10 @@ namespace ASample.ByhShop.Service
         /// <param name="orderLambda">排序表达式</param>
         /// <param name="isAsc">是否是升序</param>
         /// <returns></returns>
-        //public IQueryable<T> SelectPaged<s>(int pageIndex, int pageSize, out int totalCount, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc)
-        //{
-        //    return CurrentDal.SelectPaged<s>(pageIndex, pageSize, out totalCount, whereLambda, orderLambda, isAsc);
-        //}
+        public async Task<PagedData<T>> SelectPagedAsync<s>(int pageIndex, int pageSize,Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc)
+        {
+            return await CurrentRepository.SelectPagedAsync<s>(pageIndex, pageSize, whereLambda, orderLambda, isAsc);
+        }
 
         /// <summary>
         /// 查询出数据,将数据以分页的形式展示出来。没有输出总数
