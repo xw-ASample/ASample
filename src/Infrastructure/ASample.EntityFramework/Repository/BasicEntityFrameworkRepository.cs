@@ -37,8 +37,23 @@ namespace ASample.EntityFramework.Repository
 
         public async Task<PagedData<TEntity>> SelectPagedAsync<s>(int pageIndex, int pageSize,  Expression<Func<TEntity, bool>> whereLambda, Expression<Func<TEntity, s>> orderLambda, bool isAsc = true)
         {
-            int totalCount = 0;
-            return null;
+            var temp = _dbSet.Where(whereLambda);
+            var total = temp.Count();
+            IQueryable<TEntity> pages;
+            if (isAsc)
+            {
+                pages = temp.OrderBy<TEntity,s>(orderLambda).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+            }
+            else
+            {
+                pages = temp.OrderByDescending<TEntity, s>(orderLambda).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+            }
+            var result = new PagedData<TEntity>(pageIndex, pageSize)
+            {
+                Total = total,
+                Rows = pages.ToList(),
+            };
+            return result;
         }
 
         public async Task AddAsync(TEntity entity)
