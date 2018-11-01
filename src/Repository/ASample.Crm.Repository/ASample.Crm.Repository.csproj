@@ -56,6 +56,10 @@
       <Project>{A4D60581-4E2E-4FDE-84D4-374B1BE84A8D}</Project>
       <Name>ASample.EntityFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\ASmaple.Domain\ASmaple.Domain.csproj">
+      <Project>{C0008393-2149-420A-8BA1-304C07E14F8B}</Project>
+      <Name>ASmaple.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Model\ASample.Crm.Model\ASample.Crm.Model.csproj">
       <Project>{B62219C6-2803-495A-8E78-8C37C4FE032D}</Project>
       <Name>ASample.Crm.Model</Name>
