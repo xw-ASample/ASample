@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ASample.EntityFramework.Repository
 {
-    public class BasicEntityFrameworkRepository<TDbContext,TEntity,TKey> :IBasicEntityFrameworkRepository<TEntity, TKey> 
+    public class BasicEntityFrameworkEntityRepository<TDbContext,TEntity,TKey> : IBasicEntityFrameworkEntityRepository<TEntity, TKey> 
         where TDbContext: DbContext ,new()
-        where TEntity : AggregateRoot
+        where TEntity : Entity
     {
         TDbContext db
         {
@@ -30,14 +30,24 @@ namespace ASample.EntityFramework.Repository
         }
 
         public DbSet<TEntity> _dbSet;
-        public BasicEntityFrameworkRepository()
+        public BasicEntityFrameworkEntityRepository()
         {
             _dbSet = db.Set<TEntity>();
         }
 
+        /// <summary>
+        /// 分页展示
+        /// </summary>
+        /// <typeparam name="s"></typeparam>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="whereLambda"></param>
+        /// <param name="orderLambda"></param>
+        /// <param name="isAsc"></param>
+        /// <returns></returns>
         public async Task<PagedData<TEntity>> SelectPagedAsync<s>(int pageIndex, int pageSize,  Expression<Func<TEntity, bool>> whereLambda, Expression<Func<TEntity, s>> orderLambda, bool isAsc = true)
         {
-            var temp = _dbSet.Where(whereLambda).Where(c =>!c.IsDeleted);
+            var temp = _dbSet.Where(whereLambda);
             var total = temp.Count();
             IQueryable<TEntity> pages;
             if (isAsc)
@@ -56,43 +66,59 @@ namespace ASample.EntityFramework.Repository
             return result;
         }
 
-        public async Task AddAsync(TEntity entity)
+        /// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="entitys"></param>
+        /// <returns></returns>
+        public async Task AddListAsync(List<TEntity> entitys)
         {
-            _dbSet.Add(entity);
-            //await db.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(TEntity entity)
-        {
-            entity.ModifyTime = DateTime.Now;
-            _dbSet.Attach(entity);
-            db.Entry(entity).State = EntityState.Modified;
+            foreach (var item in entitys)
+            {
+                _dbSet.Add(item);
+            }
             //await db.SaveChangesAsync();
         }
 
         /// <summary>
-        /// 逻辑删除
+        /// 物理删除
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
         public async Task DeleteAsync(TKey key)
         {
-            var entity = _dbSet.Find(key);
-            entity.DeleteTime = DateTime.Now;
-            entity.IsDeleted = true;
-
-            //if(entity == null)
-            //    throw new Exception("不存在该记录");
-            //_dbSet.Remove(entity);
+            var entity =await _dbSet.FindAsync(key);
+            if (entity == null)
+                throw new Exception("不存在该记录");
+            _dbSet.Remove(entity);
             //await db.SaveChangesAsync();
         }
-        
+
+        /// <summary>
+        /// 物理删除
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public async Task DeleteListAsync(List<TKey> keys)
+        {
+            var deleteList = new List<TEntity>();
+            foreach (var key in keys)
+            {
+                var entity = await _dbSet.FindAsync(key);
+                if (entity == null)
+                    throw new Exception("不存在该记录");
+                deleteList.Add(entity);
+            }
+            _dbSet.RemoveRange(deleteList);
+            //await db.SaveChangesAsync();
+        }
+
         public async Task<TEntity> GetAsync(TKey key)
         {
             return await _dbSet.FindAsync(key);
         }
 
-        public virtual async Task<IList<TEntity>> SelectAsync(Expression<Func<TEntity, bool>> whereLambda = null)
+        public  async Task<IList<TEntity>> SelectAsync(Expression<Func<TEntity, bool>> whereLambda = null)
         {
             IList<TEntity> list;
             if (whereLambda == null)

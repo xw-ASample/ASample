@@ -165,7 +165,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\AdminRoleController.cs" />
     <Compile Include="Api\AdminController.cs" />
+    <Compile Include="Api\MenuController.cs" />
+    <Compile Include="Api\RoleController.cs" />
+    <Compile Include="Api\RoleMenuController.cs" />
     <Compile Include="App_Start\AutoFacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -176,7 +180,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IServices\IAdminService.cs" />
     <Compile Include="Migrations\201810291414394_initPermission.cs" />
     <Compile Include="Migrations\201810291414394_initPermission.Designer.cs">
       <DependentUpon>201810291414394_initPermission.cs</DependentUpon>
@@ -188,13 +191,28 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RoleMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorys\AdminRoleRepository.cs" />
     <Compile Include="Repositorys\AdminRepository.cs" />
+    <Compile Include="Repositorys\Base\BaseEntityRepository.cs" />
     <Compile Include="Repositorys\Base\BaseRepository.cs" />
+    <Compile Include="Repositorys\Base\IBaseEntityRepository.cs" />
     <Compile Include="Repositorys\Base\IBaseRepository.cs" />
+    <Compile Include="Repositorys\MenuRepository.cs" />
+    <Compile Include="Repositorys\RoleMenuRepository.cs" />
+    <Compile Include="Repositorys\RoleRepository.cs" />
+    <Compile Include="Services\AdminRoleService.cs" />
     <Compile Include="Services\AdminService.cs" />
+    <Compile Include="Services\Base\BaseEntityService.cs" />
     <Compile Include="Services\Base\BaseService.cs" />
+    <Compile Include="Services\Base\IBaseEntityService.cs" />
     <Compile Include="Services\Base\IBaseService.cs" />
+    <Compile Include="Services\MenuService.cs" />
+    <Compile Include="Services\RoleMenuService.cs" />
+    <Compile Include="Services\RoleService.cs" />
+    <Compile Include="ViewModels\AdminRoleView.cs" />
     <Compile Include="ViewModels\AdminView.cs" />
+    <Compile Include="ViewModels\MenuView.cs" />
+    <Compile Include="ViewModels\RoleView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

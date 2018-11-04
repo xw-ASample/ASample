@@ -3,11 +3,12 @@ using ASmaple.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ASample.Permission.Service.Repositorys
 {
-    public class BaseRepository <T>: BasicEntityFrameworkRepository<ASamplePermissionDbContext, T, Guid> where T : AggregateRoot
+    public interface IBaseEntityRepository<T,TKey> : IBasicEntityFrameworkEntityRepository<T, TKey> where T : Entity
     {
 
     }

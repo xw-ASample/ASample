@@ -9,10 +9,10 @@ using System.Web;
 
 namespace ASample.Permission.Service.Services
 {
-    public class BaseService<T> : IBaseService<T> where T : class
+    public class BaseService<T> : IBaseService<T> where T : AggregateRoot
     {
         //定义一个属性来接收子类的值
-        public IBaseRepository<T> CurrentRepository { get; set; }
+        public BaseRepository<T> CurrentRepository { get; set; }
 
         #region 1.0 查询相关方法
         /// <summary>
@@ -40,6 +40,7 @@ namespace ASample.Permission.Service.Services
         public async Task<PagedData<T>> SelectPagedAsync<s>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc)
         {
             return await CurrentRepository.SelectPagedAsync<s>(pageIndex, pageSize, whereLambda, orderLambda, isAsc);
+
         }
 
         /// <summary>
@@ -77,6 +78,7 @@ namespace ASample.Permission.Service.Services
         public async Task DeleteAsync(Guid id)
         {
             await CurrentRepository.DeleteAsync(id);
+            await CurrentRepository.Commit();
         }
 
         /// <summary>
@@ -111,6 +113,7 @@ namespace ASample.Permission.Service.Services
         /// <returns></returns>
         public async Task UpdateAsync(T entity)
         {
+            
             await CurrentRepository.UpdateAsync(entity);
             await CurrentRepository.Commit();
         }
@@ -125,6 +128,7 @@ namespace ASample.Permission.Service.Services
         public async Task AddAsync(T entity)
         {
             await CurrentRepository.AddAsync(entity);
+            await CurrentRepository.Commit();
         }
         #endregion
     }

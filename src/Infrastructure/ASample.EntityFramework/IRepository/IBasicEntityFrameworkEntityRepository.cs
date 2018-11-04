@@ -1,27 +1,27 @@
-﻿using System;
+﻿using ASmaple.Domain.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ASample.EntityFramework.MySql.IRepository
+namespace ASample.EntityFramework.Repository
 {
-    public interface IBasicEntityFrameworkRepository<TEntity, TKey> where TEntity : class
+    public interface  IBasicEntityFrameworkEntityRepository<TEntity,TKey> where TEntity :Entity
     {
+
         /// <summary>
         /// 添加
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task AddAsync(TEntity entity);
+        Task AddListAsync(List<TEntity> entity);
 
         /// <summary>
-        /// 修改
+        /// 删除
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task UpdateAsync(TEntity entity);
+        Task DeleteListAsync(List<TKey> key);
 
         /// <summary>
         /// 删除
@@ -37,7 +37,6 @@ namespace ASample.EntityFramework.MySql.IRepository
         /// <returns></returns>
         Task<TEntity> GetAsync(TKey key);
 
-
         /// <summary>
         /// 查询所有
         /// </summary>
@@ -45,8 +44,6 @@ namespace ASample.EntityFramework.MySql.IRepository
         //Task<IList<T>> SelectAsync(Func<IQueryable<T>, IQueryable<T>> applyExp = null);
 
         Task<IList<TEntity>> SelectAsync(Expression<Func<TEntity, bool>> whereLambda = null);
-
-        //Task<IPaged<>> SelectPagedAsync();
 
         /// <summary>
         /// 提交EF上下文
