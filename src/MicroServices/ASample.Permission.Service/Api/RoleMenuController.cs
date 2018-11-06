@@ -12,6 +12,7 @@ using System.Web.Http;
 
 namespace ASample.Permission.Service.Api
 {
+    [RoutePrefix("api/RoleMenu")]
     public class RoleMenuController : ApiController
     {
         public RoleService RoleService { get; set; }
