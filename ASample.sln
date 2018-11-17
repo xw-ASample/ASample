@@ -101,6 +101,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Permission.Service", "src\MicroServices\ASample.Permission.Service\ASample.Permission.Service.csproj", "{1B1CA94A-12A1-4831-B99A-BA5338EFCC96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASample.Identity.Service", "src\MicroServices\ASample.Identity.Service\ASample.Identity.Service.csproj", "{EECDD0DC-DD1A-4CE0-AF4E-DF028BB59931}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,6 +225,10 @@ Global
 		{1B1CA94A-12A1-4831-B99A-BA5338EFCC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B1CA94A-12A1-4831-B99A-BA5338EFCC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B1CA94A-12A1-4831-B99A-BA5338EFCC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECDD0DC-DD1A-4CE0-AF4E-DF028BB59931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECDD0DC-DD1A-4CE0-AF4E-DF028BB59931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECDD0DC-DD1A-4CE0-AF4E-DF028BB59931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECDD0DC-DD1A-4CE0-AF4E-DF028BB59931}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -274,6 +280,7 @@ Global
 		{0B46CC0F-798E-4CB4-938E-65D97C62479B} = {CE08BA30-817E-4BD7-8261-B2C57BA0CB06}
 		{F2620EEC-09A0-4330-A660-842D8DC50FF8} = {F7A40E3B-CF98-4988-BA93-45C5FAD0FCE3}
 		{1B1CA94A-12A1-4831-B99A-BA5338EFCC96} = {F2620EEC-09A0-4330-A660-842D8DC50FF8}
+		{EECDD0DC-DD1A-4CE0-AF4E-DF028BB59931} = {F2620EEC-09A0-4330-A660-842D8DC50FF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D4A0F56-60FF-4B79-B8BA-BC798D8DE24A}
