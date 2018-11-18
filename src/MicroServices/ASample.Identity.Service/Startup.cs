@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http;
+using ASample.Identity.Service.Infrasturatuce;
+using ASample.Identity.Service.Infrasturatuce.Model;
 using ASample.Identity.Service.Infrasturatuce.Provider;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
+using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 
@@ -26,6 +31,14 @@ namespace ASample.Identity.Service
 
         public void ConfigAuth(IAppBuilder app)
         {
+            app.CreatePerOwinContext<IdentityContext>(() => new IdentityContext());
+            //app.CreatePerOwinContext<UserManager<AppUser>>(
+            //(o, c) => new UserManager<AppUser>(new UserStore<AppUser>(
+            //c.Get<IdentityContext>())));
+            //app.CreatePerOwinContext<RoleManager<IdentityRole>>(
+            //(o, c) => new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(
+            //c.Get<IdentityContext>())));
+
             OAuthAuthorizationServerOptions option = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
@@ -35,6 +48,12 @@ namespace ASample.Identity.Service
             };
             app.UseOAuthAuthorizationServer(option);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                LoginPath = new PathString("/Account/Login")
+            });
 
         }
     }

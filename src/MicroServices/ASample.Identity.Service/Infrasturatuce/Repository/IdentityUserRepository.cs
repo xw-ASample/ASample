@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -42,6 +43,13 @@ namespace ASample.Identity.Service.Infrasturatuce.Repository
         {
             IdentityUser user = await _userManager.FindByNameAsync(username);
             return user;
+        }
+
+        public async Task<ClaimsIdentity> CreateClaims(IdentityUser user)
+        {
+            var identityClaims = _userManager.CreateIdentity(
+                user, DefaultAuthenticationTypes.ApplicationCookie);
+            return identityClaims;
         }
 
         public void Dispose()

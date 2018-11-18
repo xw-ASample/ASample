@@ -209,9 +209,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrasturatuce\DataInit\IdentityDbInit.cs" />
     <Compile Include="Infrasturatuce\IdentityContext.cs" />
+    <Compile Include="Infrasturatuce\Model\AppUser.cs" />
     <Compile Include="Infrasturatuce\Provider\AuthorizationServerProvider.cs" />
     <Compile Include="Infrasturatuce\Repository\IdentityUserRepository.cs" />
+    <Compile Include="Models\User\LoginModel.cs" />
     <Compile Include="Models\User\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -259,7 +262,6 @@
   <ItemGroup>
     <Folder Include="Api\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Infrasturatuce\Model\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>
