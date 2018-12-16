@@ -14,11 +14,11 @@ namespace ASample.Permission.Service
         protected void Application_Start()
         {
             AutoFacConfig.Register();
-            AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //AreaRegistration.RegisterAllAreas();
+            //GlobalConfiguration.Configure(WebApiConfig.Register);
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
             
         }
     }

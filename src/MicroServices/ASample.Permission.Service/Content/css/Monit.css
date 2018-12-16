@@ -1,0 +1,232 @@
+﻿
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        html {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        body {
+            background-color: #051236;
+            overflow: hidden;
+        }
+
+        p,
+        span {
+            color: #fff;
+            color: #dfe9ff;
+        }
+        /*清楚浮动*/
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            font-size: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            padding: 56px 45px 20px 45px;
+        }
+
+        .chars-box {
+            min-width: 200px;
+            width: 29%;
+            display: inline-block;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        .user-title {
+            text-align: center;
+        }
+
+            .user-title img {
+                width: 30%;
+                height: 4%;
+            }
+
+        .user-number {
+            width: 100%;
+            height:95%;
+        }
+
+        .user-chars .char-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .user-number .user-detail {
+            width: 100%;
+            height: 12.5%;
+            background-image: url("../../Content/img/backgrund.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .user-detail > div {
+            display: inline-block;
+            height: 100%;
+            margin-top: 5px;
+            color: #fff;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .user-total .dataStatistics {
+            width: 100%;
+        }
+
+        .userIdentity-total .repeat-data {
+            width: 100%;
+        }
+
+        .change-num {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user-chars p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .user-chars {
+            height: 43%;
+            width: 110%;
+            min-height: 250px;
+        }
+        /*中间地图*/
+        .china-box {
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .china-box .map-title {
+                text-align: center;
+                font-size: 28px;
+                font-weight: 900;
+            }
+
+            .china-box .title-detail {
+                text-align: center;
+                font-size: 18px;
+                margin-top: 20px;
+                font-weight: 700;
+            }
+        /*右边排行*/
+
+        .dataTop-box {
+            width: 19%;
+            display: inline-block;
+            height: 100%;
+            float: right;
+        }
+
+            .dataTop-box .top-title {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                /*color:#dfe9ff;*/
+                min-width: 200px;
+            }
+
+            .dataTop-box .top {
+                width: 100%;
+                height: 45%;
+                min-height: 300px;
+                min-width: 230px;
+                /*background: url("../../Content/img/backbg.jpg");*/
+                background-size: 100%;
+                background-repeat: no-repeat;
+                padding: 10%;
+                z-index: 1000;
+                margin-top: -15%;
+                margin-bottom: -15%;
+            }
+
+        .week-title {
+            margin-top: 10%;
+        }
+
+        .bg {
+            width: 100%;
+            height: 5%;
+            min-width: 230px;
+        }
+
+        .top-list {
+            text-align: center;
+            padding: 7% 5%;
+        }
+
+        .week-top .top-list {
+            padding: 11% 15%;
+        }
+
+        .top-list .top-left {
+            float: left;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .top-list .top-middle {
+            font-size: 16px;
+        }
+
+        .top-list .top-right {
+            float: right;
+            font-size: 18px;
+        }
+
+       .top .top-list:nth-of-type(1) .top-right{
+            color: #bc6c75;
+        }
+
+        .top .top-list:nth-of-type(2) .top-right{
+            color: #f2b07c;
+        }
+
+        .top .top-list:nth-of-type(3) .top-right {
+            color: #45b8fd;
+        }
+
+        .top .top-list:nth-of-type(4) .top-right {
+            color: #2ec7c9;
+        }
+
+        .top .top-list:nth-of-type(5) .top-right {
+            color: #b6a2de;
+        }
+
+        .dataStatistics span {
+            color: #45b8fd;
+        }
+
+        .repeat-data span {
+            color: #50ffd9;
+        }

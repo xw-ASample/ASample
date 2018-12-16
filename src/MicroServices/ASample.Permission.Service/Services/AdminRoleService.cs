@@ -4,7 +4,7 @@ using System;
 
 namespace ASample.Permission.Service.Services
 {
-    public class AdminRoleService:BaseEntityService<AdminRole,Guid>
+    public class AdminRoleService:BaseService<AdminRole,Guid>
     {
 
         public AdminRoleService()

@@ -14,7 +14,6 @@ namespace ASample.Permission.Service.Services
         //定义一个属性来接收子类的值
         public BaseRepository<T> CurrentRepository { get; set; }
 
-        #region 1.0 查询相关方法
         /// <summary>
         /// 查询出数据，将数据全部展示出来
         /// </summary>
@@ -24,7 +23,6 @@ namespace ASample.Permission.Service.Services
         {
             return await CurrentRepository.SelectAsync(whereLambda);
         }
-
 
         /// <summary>
         /// 查询出数据,将数据以分页的形式展示出来
@@ -40,7 +38,6 @@ namespace ASample.Permission.Service.Services
         public async Task<PagedData<T>> SelectPagedAsync<s>(int pageIndex, int pageSize, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderLambda, bool isAsc)
         {
             return await CurrentRepository.SelectPagedAsync<s>(pageIndex, pageSize, whereLambda, orderLambda, isAsc);
-
         }
 
         /// <summary>
@@ -58,6 +55,7 @@ namespace ASample.Permission.Service.Services
         //{
         //    return CurrentDal.SelectPaged<s>(pageIndex, pageSize, whereLambda, orderLambda, isAsc);
         //}
+
         /// <summary>
         /// 连表查询
         /// </summary>
@@ -68,18 +66,6 @@ namespace ASample.Permission.Service.Services
         //{
         //    return CurrentDal.SelectJoin(whereLambda, tableNames);
         //}
-        #endregion
-
-        #region 2.0 删除相关方法
-        /// <summary>
-        /// 前台传过来一个实体进行删除
-        /// </summary>
-        /// <param name="entity"></param>
-        public async Task DeleteAsync(Guid id)
-        {
-            await CurrentRepository.DeleteAsync(id);
-            await CurrentRepository.Commit();
-        }
 
         /// <summary>
         /// 前台传过来一个实体的Id进行删除
@@ -91,20 +77,28 @@ namespace ASample.Permission.Service.Services
         //{
         //    CurrentDal.DeleteAsync(id, whereLambda);
         //}
-        #endregion
 
-        #region 3.0 修改相关的方法
         /// <summary>
         /// 通过前台传过来的实体进行修改
         /// </summary>
-        /// <param name="entity">接收前台传过来的实体</param>
-        /// <param name="propertys">获取用户修改过的实体的属性</param>
+        /// <param name = "entity" > 接收前台传过来的实体 </ param >
+        /// < param name="propertys">获取用户修改过的实体的属性</param>
         /// <returns></returns>
         //public bool Update(T entity, string[] propertys)
         //{
-        //    CurrentDal.Update(entity, propertys);
+        //    CurrentRepository.Update(entity, propertys);
         //    return CurreuntDBSession.SavaChanges();
         //}
+
+        /// <summary>
+        /// 前台传过来一个实体进行删除
+        /// </summary>
+        /// <param name="entity"></param>
+        public async Task DeleteAsync(Guid id)
+        {
+            await CurrentRepository.DeleteAsync(id);
+            //await CurrentRepository.Commit();
+        }
 
         /// <summary>
         /// 通过删除传入的实体
@@ -113,13 +107,9 @@ namespace ASample.Permission.Service.Services
         /// <returns></returns>
         public async Task UpdateAsync(T entity)
         {
-            
             await CurrentRepository.UpdateAsync(entity);
-            await CurrentRepository.Commit();
+            //await CurrentRepository.Commit();
         }
-        #endregion
-
-        #region 4.0 新增相关的方法
         /// <summary>
         /// 将前台传过来的实体添加进入数据库
         /// </summary>
@@ -128,8 +118,7 @@ namespace ASample.Permission.Service.Services
         public async Task AddAsync(T entity)
         {
             await CurrentRepository.AddAsync(entity);
-            await CurrentRepository.Commit();
+            //await CurrentRepository.Commit();
         }
-        #endregion
     }
 }

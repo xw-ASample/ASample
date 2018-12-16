@@ -9,7 +9,7 @@ using System.Web;
 
 namespace ASample.Permission.Service.Services
 {
-    public class BaseEntityService<T,TKey> : IBaseEntityService<T,TKey> where T : Entity
+    public class BaseService<T,TKey> : IBaseEntityService<T,TKey> where T : Entity
     {
         //定义一个属性来接收子类的值
         public BaseEntityRepository<T,TKey> CurrentRepository { get; set; }

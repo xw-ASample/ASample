@@ -57,12 +57,39 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -70,8 +97,11 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Owin.5.2.6\lib\net45\System.Web.Http.Owin.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
@@ -165,8 +195,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\AccountController.cs" />
     <Compile Include="Api\AdminRoleController.cs" />
     <Compile Include="Api\AdminController.cs" />
+    <Compile Include="Api\Base\BaseApiController.cs" />
     <Compile Include="Api\MenuController.cs" />
     <Compile Include="Api\RoleController.cs" />
     <Compile Include="Api\RoleMenuController.cs" />
@@ -176,23 +208,33 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ASamplePermissionDbContext.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Core\Redirect.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810291414394_initPermission.cs" />
-    <Compile Include="Migrations\201810291414394_initPermission.Designer.cs">
-      <DependentUpon>201810291414394_initPermission.cs</DependentUpon>
+    <Compile Include="Infrastructure\ASamplePermissionSignInManage.cs" />
+    <Compile Include="Infrastructure\ASamplePermissionUserManager.cs" />
+    <Compile Include="Infrastructure\ASamplePermissionUserStore.cs" />
+    <Compile Include="Infrastructure\OwinContextHelper.cs" />
+    <Compile Include="Migrations\201812150411330_initDatebase_Again.cs" />
+    <Compile Include="Migrations\201812150411330_initDatebase_Again.Designer.cs">
+      <DependentUpon>201812150411330_initDatebase_Again.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\AdminRole.cs" />
-    <Compile Include="Models\Menu.cs" />
-    <Compile Include="Models\Role.cs" />
-    <Compile Include="Models\RoleMenu.cs" />
+    <Compile Include="Models\AggregateRoot\Admin.cs" />
+    <Compile Include="Models\Entity\AdminRole.cs" />
+    <Compile Include="Models\AggregateRoot\IdentityPassword.cs" />
+    <Compile Include="Models\AggregateRoot\IdentityUser.cs" />
+    <Compile Include="Models\Entity\IdentityUserLoginInfo.cs" />
+    <Compile Include="Models\AggregateRoot\Menu.cs" />
+    <Compile Include="Models\AggregateRoot\Role.cs" />
+    <Compile Include="Models\Entity\RoleMenu.cs" />
+    <Compile Include="Models\Value\PasswordStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\AdminRoleRepository.cs" />
     <Compile Include="Repositorys\AdminRepository.cs" />
@@ -200,6 +242,8 @@
     <Compile Include="Repositorys\Base\BaseRepository.cs" />
     <Compile Include="Repositorys\Base\IBaseEntityRepository.cs" />
     <Compile Include="Repositorys\Base\IBaseRepository.cs" />
+    <Compile Include="Repositorys\IdentityPasswordRepository.cs" />
+    <Compile Include="Repositorys\IdentityUserRepository.cs" />
     <Compile Include="Repositorys\MenuRepository.cs" />
     <Compile Include="Repositorys\RoleMenuRepository.cs" />
     <Compile Include="Repositorys\RoleRepository.cs" />
@@ -209,23 +253,34 @@
     <Compile Include="Services\Base\BaseService.cs" />
     <Compile Include="Services\Base\IBaseEntityService.cs" />
     <Compile Include="Services\Base\IBaseService.cs" />
+    <Compile Include="Services\IdentityPasswordService.cs" />
+    <Compile Include="Services\IdentityUserService.cs" />
     <Compile Include="Services\MenuService.cs" />
     <Compile Include="Services\RoleMenuService.cs" />
     <Compile Include="Services\RoleService.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AdminChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\AdminRoleView.cs" />
     <Compile Include="ViewModels\AdminView.cs" />
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\RoleView.cs" />
+    <Compile Include="ViewModels\UserLoginModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap-theme.css" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\changeNum.css" />
+    <Content Include="Content\css\iconfont.css" />
+    <Content Include="Content\css\jquery.bootgrid.css" />
+    <Content Include="Content\css\jquery.bootgrid.min.css" />
+    <Content Include="Content\css\Monit.css" />
     <Content Include="Content\css\plugins\bootstrap-fileinput\fileinput.css" />
     <Content Include="Content\css\plugins\bootstrap-select\bootstrap-select.css" />
     <Content Include="Content\css\plugins\bootstrap-table\bootstrap-table.css" />
@@ -243,11 +298,27 @@
     <Content Include="Content\css\plugins\layer\layer.js" />
     <Content Include="Content\css\plugins\toastr\toastr.min.css" />
     <Content Include="Content\css\Site.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Content\font-awesome\css\font-awesome.css" />
     <Content Include="Content\font-awesome\css\iconfont.css" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\font-awesome\fonts\iconfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\account.png" />
+    <Content Include="Content\img\alipay.png" />
+    <Content Include="Content\img\backbg.jpg" />
+    <Content Include="Content\img\backgrund.jpg" />
+    <Content Include="Content\img\backgrundBig.jpg" />
+    <Content Include="Content\img\bottom.png" />
+    <Content Include="Content\img\depart.png" />
+    <Content Include="Content\img\login-bg.jpg" />
+    <Content Include="Content\img\login-logo.png" />
+    <Content Include="Content\img\sprite.png" />
+    <Content Include="Content\img\top.png" />
+    <Content Include="Content\img\user.jpg" />
+    <Content Include="Content\img\weixin.png" />
+    <Content Include="Content\img\wxprogram.png" />
+    <Content Include="Content\img\zhengwu.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -281,11 +352,15 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.bootgrid.js" />
+    <Content Include="Scripts\jquery.bootgrid.min.js" />
+    <Content Include="Scripts\jquery.extend.v2.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\plugin-bt.js" />
     <Content Include="Scripts\plugins\bootbox\bootbox.js" />
     <Content Include="Scripts\plugins\bootbox\bootbox.min.js" />
     <Content Include="Scripts\plugins\bootstrap-fileinput\fileinput.js" />
@@ -633,11 +708,10 @@
     <Content Include="Scripts\plugins\uEditor\third-party\video-js\font\vjs.eot" />
     <Content Include="Scripts\plugins\uEditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="Scripts\plugins\uEditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\" />
-    <Folder Include="Infrastructure\" />
     <Folder Include="Scripts\plugins\uEditor\third-party\snapscreen\" />
   </ItemGroup>
   <ItemGroup>
@@ -654,9 +728,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\ASample.Common\ASample.Common.csproj">
+      <Project>{748EBE52-AFEC-4EC5-9D45-920AA0B15B98}</Project>
+      <Name>ASample.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\ASample.EntityFramework\ASample.EntityFramework.csproj">
       <Project>{A4D60581-4E2E-4FDE-84D4-374B1BE84A8D}</Project>
       <Name>ASample.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\ASample.Utility\ASample.Utility.csproj">
+      <Project>{c17a29f2-4d3a-43e8-9ed9-1f95726655d8}</Project>
+      <Name>ASample.Utility</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\ASmaple.Domain\ASmaple.Domain.csproj">
       <Project>{C0008393-2149-420A-8BA1-304C07E14F8B}</Project>
@@ -664,8 +746,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810291414394_initPermission.resx">
-      <DependentUpon>201810291414394_initPermission.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812150411330_initDatebase_Again.resx">
+      <DependentUpon>201812150411330_initDatebase_Again.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

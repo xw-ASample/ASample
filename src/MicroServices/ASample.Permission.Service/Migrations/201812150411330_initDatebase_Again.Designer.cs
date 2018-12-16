@@ -7,13 +7,13 @@ namespace ASample.Permission.Service.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class initPermission : IMigrationMetadata
+    public sealed partial class initDatebase_Again : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initPermission));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initDatebase_Again));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810291414394_initPermission"; }
+            get { return "201812150411330_initDatebase_Again"; }
         }
         
         string IMigrationMetadata.Source

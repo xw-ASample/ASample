@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ASample.Identity.Service.Controllers
+namespace ASample.Permission.Service.Controllers
 {
-    public class AdminController : Controller
+    public class AccountController : Controller
     {
-        // GET: Admin
+        // GET: Account
         public ActionResult Index()
         {
             return View();

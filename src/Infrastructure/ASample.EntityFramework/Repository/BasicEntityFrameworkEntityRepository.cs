@@ -81,6 +81,30 @@ namespace ASample.EntityFramework.Repository
         }
 
         /// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="entitys"></param>
+        /// <returns></returns>
+        public async Task AddAsync(TEntity entity)
+        {
+            _dbSet.Add(entity);
+            //await db.SaveChangesAsync();
+        }
+
+        /// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="entitys"></param>
+        /// <returns></returns>
+        public async Task UpdateAsync(TEntity entity)
+        {
+            //_dbSet.Attach(entity);
+            //db.Entry(entity).State = EntityState.Modified;
+            _dbSet.Add(entity);
+            //await db.SaveChangesAsync();
+        }
+
+        /// <summary>
         /// 物理删除
         /// </summary>
         /// <param name="key"></param>

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ASample.Permission.Service.Services
 {
-    public class RoleMenuService:BaseEntityService<RoleMenu,Guid>
+    public class RoleMenuService:BaseService<RoleMenu,Guid>
     {
         public RoleMenuService()
         {

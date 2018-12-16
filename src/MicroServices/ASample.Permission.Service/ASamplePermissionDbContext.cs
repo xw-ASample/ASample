@@ -29,5 +29,8 @@ namespace ASample.Permission.Service
         public DbSet<AdminRole> AdminRole { get; set; }
 
         public DbSet<RoleMenu> RoleMenu { get; set; }
+        public DbSet<IdentityUser> IdentityUser { get; set; }
+        public DbSet<IdentityPassword> IdentityPassword { get; set; }
+        public DbSet<IdentityUserLoginInfo> IdentityUserLoginInfo { get; set; }
     }
 }
